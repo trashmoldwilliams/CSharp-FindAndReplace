@@ -23,7 +23,7 @@ namespace FindAndReplace.Objects
     public void Test2_IfInput2ReplacesMultipleInputs_ReturnInput3()
     {
       //Arrange
-      string input1 = "Once upon a time there was a dude named Simon and simon was really cool.";
+      string input1 = "Once upon a time there was a dude named Simon. simon was really cool.";
       string input2 = "Simon";
       string input3 = "Will";
       FindAndReplaceWord testWord = new FindAndReplaceWord(input1, input2, input3);
@@ -32,7 +32,7 @@ namespace FindAndReplace.Objects
       string result = testWord.GetResults();
 
       //Assert
-      Assert.Equal("Once upon a time there was a dude named Will and Will was really cool.", result);
+      Assert.Equal("Once upon a time there was a dude named Will. Will was really cool.", result);
     }
   }
 }

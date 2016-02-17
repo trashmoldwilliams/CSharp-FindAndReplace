@@ -25,6 +25,10 @@ namespace FindAndReplace.Objects
         if(phraseArray[i].ToLower() == _input2.ToLower())
         {
           phraseArray[i] = _input3;
+
+        } else if (phraseArray[i].Contains(_input2))
+        {
+          phraseArray[i] = phraseArray[i].Replace(_input2, _input3);
         }
       }
       string results = string.Join(" ", phraseArray);
